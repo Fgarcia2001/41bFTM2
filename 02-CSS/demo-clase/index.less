@@ -1,0 +1,76 @@
+//Importar codigo de otros archivos
+@import "variables";
+@import "enlaces";
+
+body {
+  background-color: aqua;
+}
+//Variables
+
+div {
+  color: @colorPrincipal;
+}
+
+span {
+  width: @ancho * 2;
+  height: @ancho - 2;
+}
+//Funciones
+//importado
+
+//Anidadiones de selectores
+/*
+<section>
+    <article>
+        <p>
+         ...
+        </p>
+    </article>
+
+</section>
+*/
+
+section {
+  border: 1px solid red;
+  article {
+    font-size: medium;
+    p {
+      background-color: lightcyan;
+    }
+  }
+}
+
+//MIXINS
+
+.texto-importante {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.texto-importante-2(@peso, @decoracion) {
+  font-weight: @peso;
+  text-decoration: @decoracion;
+  font-style: normal;
+}
+
+.alerta {
+  .texto-importante-2(normal, line-through);
+  color: red;
+}
+
+//Herencia
+
+.boton {
+  border-radius: 5px;
+  font-size: medium;
+  color: antiquewhite;
+}
+
+.boton-rojo {
+  &:extend(.boton);
+  background-color: red;
+}
+
+.boton-azul {
+  &:extend(.boton);
+  background-color: blue;
+}

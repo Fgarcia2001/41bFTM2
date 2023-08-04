@@ -1,0 +1,55 @@
+p {
+  font-size: 30px;
+}
+body {
+  background-color: aqua;
+}
+div {
+  color: blue;
+}
+span {
+  width: 200px;
+  height: 98px;
+}
+/*
+<section>
+    <article>
+        <p>
+         ...
+        </p>
+    </article>
+
+</section>
+*/
+section {
+  border: 1px solid red;
+}
+section article {
+  font-size: medium;
+}
+section article p {
+  background-color: lightcyan;
+}
+.texto-importante {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.alerta {
+  font-weight: normal;
+  text-decoration: line-through;
+  font-style: normal;
+  color: red;
+}
+.boton,
+.boton-rojo,
+.boton-azul {
+  border-radius: 5px;
+  font-size: medium;
+  color: antiquewhite;
+}
+.boton-rojo {
+  background-color: red;
+}
+.boton-azul {
+  background-color: blue;
+}
