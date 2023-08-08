@@ -1,13 +1,25 @@
-export default function Card(props) {
-   return (
-      <div>
-         {/* <button onClick={}>X</button>
-         <h2></h2>
-         <h2></h2>
-         <h2></h2>
-         <h2></h2>
-         <h2></h2>
-         <img src={} alt='' /> */}
-      </div>
-   );
+import React from "react";
+
+export default function Card({
+  id,
+  name,
+  status,
+  species,
+  gender,
+  origin,
+  image,
+  onClose,
+}) {
+  //props son las propiedades -> id, name, status, species, gender, origina, image, onClose
+  return (
+    <div>
+      <button onClick={() => onClose(id)}>X</button>
+      <h2>{name}</h2>
+      <h2>{status}</h2>
+      <h2>{species}</h2>
+      <h2>{gender}</h2>
+      <h2>{origin}</h2>
+      <img src={image} alt="imagen not found" />
+    </div>
+  );
 }
